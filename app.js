@@ -67,6 +67,7 @@ app.use((req, res) => {
 });
 
 const LOCAL_PORT = 3000;
-const GOOGLE_PORT = parseInt(process.env.PORT);
+const GOOGLE_PORT = 8080;
+const GOOGLE_PORT_ENV_VAR = parseInt(process.env.PORT);
 
-app.listen(LOCAL_PORT || GOOGLE_PORT);
+app.listen(LOCAL_PORT || GOOGLE_PORT_ENV_VAR || GOOGLE_PORT);
