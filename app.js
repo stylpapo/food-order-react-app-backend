@@ -66,4 +66,6 @@ app.use((req, res) => {
   res.status(404).json({ message: 'Not found' });
 });
 
-app.listen(3000);
+const GOOGLE_PORT = 8080;
+const LOCAL_PORT = 3000;
+app.listen(LOCAL_PORT || GOOGLE_PORT);
